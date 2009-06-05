@@ -1274,6 +1274,10 @@
   (unless (dir-exists path)
     (system (string "mkdir -p " path))))
 
+(def ensure-file (path)
+  (unless (file-exists path)
+    (system (string "mkfile " path))))
+
 (def date ((o s (seconds)))
   (rev (nthcdr 3 (timedate s))))
 
